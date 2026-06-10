@@ -1,0 +1,13 @@
+🎉 New WordPress Plugin Release: Smart Redirect For Returning Users
+
+Designed to route returning visitors to specific pages based on cookie logic — with full support for Google Analytics, redirection logs, GA4 fallback, admin alerts, and more.
+
+✅ Built-in WP Admin panel
+✅ Role-based control
+✅ Smart Analytics Tracking (client + server)
+✅ Perfect for gated portals, apps, LMS, SaaS, and memberships.
+
+🔗 Built by George Nnanwubar at Manndi Technologies Limited  
+📥 Download and full docs: https://www.manndi.com/smart-redirect-plugin
+
+#WordPress #WebDevelopment #Plugins #Analytics #GA4

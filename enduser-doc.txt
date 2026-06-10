@@ -1,0 +1,15 @@
+End User Documentation - Smart Redirect For Returning Users
+
+What It Does:
+-------------
+Redirects users to a defined app URL based on cookie presence and value. Great for membership sites or gated content.
+
+How to Use:
+-----------
+1. Install & activate plugin
+2. Go to Settings → Smart Redirect
+3. Set the cookie name, value, and target URL
+4. Optionally enable GA tracking or log exports
+
+Need Help?
+Contact George Nnanwubar at https://www.manndi.com

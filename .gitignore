@@ -1,0 +1,28 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.iml
+
+# Logs & temp
+*.log
+tmp/
+*.tmp
+
+# Dependencies / build (if ever added)
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+
+# Local config / secrets — never commit real keys
+.env
+.env.*
+*.local.php
+
+# Archives
+*.zip
+*.tar.gz

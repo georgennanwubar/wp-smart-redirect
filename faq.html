@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ – Smart Redirect For Returning Users</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #2c3e50;
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #0c1e2c;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .question {
+      font-weight: bold;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Frequently Asked Questions</h1>
+
+  <p class="question">Q: What does this plugin do?</p>
+  <p>A: It redirects users to a specified URL (e.g., app dashboard) if a specific cookie exists and matches your criteria.</p>
+
+  <p class="question">Q: When should I use this plugin?</p>
+  <p>A: When you want to automatically redirect logged-in or returning users to a custom page based on a cookie, e.g., after login or membership validation.</p>
+
+  <p class="question">Q: Can I define the cookie name and value?</p>
+  <p>A: Yes. Go to Settings → Smart Redirect to configure the cookie name and expected value.</p>
+
+  <p class="question">Q: What happens if the cookie is not found?</p>
+  <p>A: The user remains on the current page. No redirection is triggered.</p>
+
+  <p class="question">Q: Can I exclude specific roles like Admin from being redirected?</p>
+  <p>A: Yes. The settings allow you to select one or more WordPress user roles to exclude from redirection logic.</p>
+
+  <p class="question">Q: How can I track how many users have been redirected?</p>
+  <p>A: The plugin logs every redirect and shows the count in the settings panel. You can also export logs as a CSV file.</p>
+
+  <p class="question">Q: What if a user blocks JavaScript?</p>
+  <p>A: The plugin includes a GA4 Measurement Protocol fallback that sends tracking events server-side even when JavaScript is blocked.</p>
+
+  <p class="question">Q: What is the GA4 API Secret?</p>
+  <p>A: It is a key found in your Google Analytics Data Stream settings, used to send data to GA4 via server-side API calls.</p>
+
+  <p class="question">Q: Is this GDPR compliant?</p>
+  <p>A: Yes. The plugin uses anonymous IP and cookie values only. You can control all tracking settings and disable them if needed.</p>
+
+
+<section>
+  <h3>Compatibility</h3>
+  <p><strong>Requires WordPress:</strong> 5.0+<br>
+     <strong>Requires PHP:</strong> 7.0+</p>
+</section>
+
+</body>
+</html>
+
+  <p class="question">Q: Can I choose which pages this plugin runs on?</p>
+  <p>A: Yes. Go to the Smart Redirect settings and add each page or link (one per line) where the redirect should apply. You can leave out the homepage to disable default redirect behavior.</p>
+
+  <p class="question">Q: Can I invert the page matching logic?</p>
+  <p>A: Yes. Enable 'Invert URL Logic' to redirect on all pages except the ones you enter.</p>
+
+  <p class="question">Q: Can I delete plugin data on uninstall?</p>
+  <p>A: Yes. Enable the 'Delete Data On Uninstall' setting to wipe all logs and options when the plugin is removed.</p>

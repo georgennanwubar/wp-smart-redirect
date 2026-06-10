@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>End User Guide – Smart Redirect For Returning Users</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #2c3e50;
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #0c1e2c;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>End User Documentation</h1>
+  <h2>Smart Redirect For Returning Users (v1.0)</h2>
+
+  <h3>What It Does</h3>
+  <p>This plugin checks for a specific cookie on your site visitors’ browsers. If the cookie exists and matches your defined value, it redirects the user to a custom URL (like an app dashboard or member area).</p>
+
+  <h3>Getting Started</h3>
+<p>Toggle the 'Invert Logic' option if you want the redirect to run on all pages except those listed.</p>
+<p>Only apply this plugin on specific pages by entering one or more full URLs in the provided field. For example, enter your homepage URL to restrict it to the homepage only.</p>
+  <ol>
+    <li>Install and activate the plugin from your WordPress dashboard.</li>
+    <li>Navigate to <strong>Settings → Smart Redirect</strong>.</li>
+    <li>Enter the cookie name (e.g., <code>smart_user_cookie</code>) and expected value (e.g., <code>true</code>).</li>
+    <li>Enter the destination URL (e.g., <code>https://yourapp.com/dashboard</code>).</li>
+    <li>Select any roles to exclude (e.g., Admin, Editor).</li>
+    <li>Save your settings. The plugin works immediately.</li>
+  </ol>
+
+  <h3>Tracking Options</h3>
+  <p>Optionally, you can enable Google Analytics tracking. You may enter your GA4 Measurement ID and API Secret to track events both client-side and server-side.</p>
+
+  <h3>Log Exporting</h3>
+  <p>Every redirect is logged with a timestamp and IP address. Logs are viewable in the plugin settings and can be exported as CSV.</p>
+
+  <h3>Advanced Settings</h3>
+<p>To automatically remove all plugin settings on uninstall, enable the 'Delete Data On Uninstall' setting in the admin panel.</p>
+<h3>Support</h3>
+  <p>If you need help, visit the plugin documentation or contact <a href="mailto:support@manndi.com">support@manndi.com</a>.</p>
+
+
+<section>
+  <h3>Compatibility</h3>
+  <p><strong>Requires WordPress:</strong> 5.0+<br>
+     <strong>Requires PHP:</strong> 7.0+</p>
+</section>
+
+</body>
+</html>
