@@ -1,0 +1,25 @@
+Changelog - Smart Redirect For Returning Users
+
+Version 2.0 (Latest)
+---------------------
+- Renamed from Contestify Cookie Redirect to Smart Redirect For Returning Users
+- Added GA4 Measurement Protocol server-side fallback
+- Role-based exclusions, cookie control
+- CSV log exports, admin email alerts
+- GA toggle, gtag detection and auto-injection
+- Fully documented and production ready
+
+Author: George Nnanwubar
+Company: Manndi Technologies Limited
+Website: https://www.manndi.com
+
+- Added support for restricting redirect logic to specific URLs/pages
+- Default redirect on homepage can now be removed or customized
+
+- Added 'Invert URL Logic' toggle
+- Added uninstall cleanup option
+- Added inline admin tooltips for clarity
+
+Compatibility:
+- Requires WordPress: 5.0+
+- Requires PHP: 7.0+

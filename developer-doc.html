@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Developer Documentation - Smart Redirect For Returning Users</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #2c3e50;
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #0c1e2c;
+    }
+    code {
+      background: #eef;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    pre {
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Developer Documentation</h1>
+  <h2>Smart Redirect For Returning Users (v1.0)</h2>
+
+  <section>
+    <h3>Overview</h3>
+    <p>This plugin redirects users to a defined URL if a specific cookie is detected in their browser. It includes GA4 event tracking, role-based exclusions, redirection logs, email alerts, and server-side tracking fallback using the GA4 Measurement Protocol.</p>
+  </section>
+
+  <section>
+    <h3>Architecture</h3>
+    <ul>
+      <li>Frontend detection and redirection via JavaScript or PHP</li>
+      <li>Server-side event fallback via WP HTTP API</li>
+      <li>Settings stored using WordPress <code>options</code> API</li>
+      <li>Admin page registered with <code>add_options_page</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Hooks Used</h3>
+    <ul>
+      <li><code>init</code>: To perform the redirect and log actions</li>
+      <li><code>admin_menu</code>: To add the plugin settings page</li>
+      <li><code>admin_init</code>: To register settings</li>
+      <li><code>wp_head</code>: (conditionally) Injects gtag if enabled</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Settings Fields</h3>
+<ul><li><code>smart_applicable_urls</code> – List of applicable URLs (newline separated)</li><li><code>smart_invert_url_logic</code> – Inverts logic to exclude instead of include</li><li><code>smart_delete_data_on_uninstall</code> – Deletes plugin settings/data on uninstall</li></ul>
+<ul><li><code>smart_applicable_urls</code> – List of URLs where the redirect should apply (newline separated)</li></ul>
+    <ul>
+      <li><code>smart_cookie_name</code> – Cookie to check (default: smart_user_cookie)</li>
+      <li><code>smart_cookie_value</code> – Expected value to trigger redirect</li>
+      <li><code>smart_redirect_url</code> – Target redirect URL</li>
+      <li><code>smart_excluded_roles</code> – User roles excluded from redirect</li>
+      <li><code>smart_redirect_count</code> – Running count of total redirects</li>
+      <li><code>smart_redirect_logs</code> – Logs of timestamp + IP</li>
+      <li><code>smart_email_threshold</code> – Alert threshold for redirect count</li>
+      <li><code>smart_gtag_id</code> – GA4 Measurement ID</li>
+      <li><code>smart_ga4_api_secret</code> – GA4 Measurement Protocol API Secret</li>
+      <li><code>smart_enable_ga</code> – Toggle for GA4 tracking (yes/no)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Redirection Logic</h3>
+<p>You can now invert URL logic to exclude the listed pages. Also, plugin cleanup is supported during uninstall.</p>
+<p>The redirect logic only runs on the URLs you define in the settings. You can disable the default homepage redirect by removing it from the list.</p>
+    <p>On the <code>init</code> hook, the plugin checks if the current user is in an excluded role. If not, and the cookie condition is met, the following happens:</p>
+    <ol>
+      <li>Client-side redirect via JavaScript (with optional gtag)</li>
+      <li>Server-side fallback event to GA4 if enabled</li>
+      <li>Redirect logs recorded and stored in options</li>
+      <li>Email sent to admin if count exceeds threshold</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>Admin Panel</h3>
+    <p>Available under <strong>Settings → Smart Redirect</strong>. Offers complete control over all plugin functionality, including GA tracking and logging.</p>
+  </section>
+
+  <section>
+    <h3>Logging</h3>
+    <p>The plugin stores the last 1000 redirection events (timestamp + IP) in <code>smart_redirect_logs</code> option. You can export this log as a CSV from the admin panel.</p>
+  </section>
+
+  <section>
+    <h3>Security & Best Practices</h3>
+    <ul>
+      <li>Uses WordPress native <code>option</code> and <code>wp_remote_post</code> APIs</li>
+      <li>Prevents redirect logic from running in <code>is_admin()</code> and <code>DOING_AJAX</code> contexts</li>
+      <li>Escapes output and input in settings fields</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Author</h3>
+    <p>Developed by <strong>George Nnanwubar</strong> at <a href="https://www.manndi.com" target="_blank">Manndi Technologies Limited</a>.</p>
+  </section>
+
+
+<section>
+  <h3>Compatibility</h3>
+  <p><strong>Requires WordPress:</strong> 5.0+<br>
+     <strong>Requires PHP:</strong> 7.0+</p>
+</section>
+
+</body>
+</html>

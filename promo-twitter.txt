@@ -1,0 +1,7 @@
+🚀 New Plugin Launch: Smart Redirect For Returning Users 🔁
+
+Redirect returning users intelligently in #WordPress using cookie logic, GA4 support, logs, alerts & more.
+
+🧠 Built for growth-focused sites.
+🔗 Download: https://www.manndi.com/smart-redirect-plugin
+#WordPressPlugins #GA4 #Redirection

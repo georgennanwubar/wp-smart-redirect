@@ -1,0 +1,27 @@
+Developer Documentation - Smart Redirect For Returning Users
+
+Overview:
+---------
+Redirects users if a specific cookie is present. Logs activity, integrates GA4 tracking, and offers admin UI.
+
+Hooks Used:
+-----------
+- init
+- admin_menu
+- admin_init
+
+Options Used:
+-------------
+- smart_cookie_name
+- smart_cookie_value
+- smart_redirect_url
+- smart_redirect_count
+- smart_ga_enable
+- smart_gtag_id
+- smart_ga4_api_secret
+- smart_excluded_roles
+- smart_redirect_logs
+
+Author: George Nnanwubar
+Company: Manndi Technologies Limited
+Website: https://www.manndi.com

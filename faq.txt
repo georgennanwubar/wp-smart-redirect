@@ -1,0 +1,16 @@
+FAQ - Smart Redirect For Returning Users
+
+Q: What does this plugin do?
+A: It redirects returning users based on cookie detection, and supports analytics tracking.
+
+Q: Can I control who gets redirected?
+A: Yes, via role-based exclusions and cookie conditions in the settings.
+
+Q: What analytics are supported?
+A: Google Analytics (gtag) and server-side GA4 tracking via Measurement Protocol.
+
+Q: What if I don’t use GA?
+A: You can disable it from the plugin settings.
+
+Q: Who built this plugin?
+A: George Nnanwubar, Manndi Technologies Limited — https://www.manndi.com
